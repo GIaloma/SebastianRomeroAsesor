@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sebastián Romero - Asesor Inmobiliario Luxury</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sebastián Romero | Asesor Inmobiliario Luxury en Vilanova i la Geltrú</title>
+<meta name="description" content="Asesor inmobiliario en Vilanova i la Geltrú y la costa del Garraf con +18 años de experiencia en construcción y reformas. Evalúo propiedades con ojo técnico. Compra, venta e inversión inmobiliaria."/>
+
+<!-- Let's keep the structured data and other SEO meta tags the same for context -->
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<script>
   tailwind.config = {
     darkMode: "class",
     theme: {
@@ -15,6 +19,7 @@
           "primary-light": "#F4E8D1", /* Champagne tone */
           "background-dark": "#050505", /* Deepest black for contrast */
           "surface-dark": "#0a0a0a",
+          "surface-light": "#111111",
         },
         fontFamily: {
           "sans": ["Inter", "sans-serif"],
@@ -26,7 +31,8 @@
   }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@100;300;400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100,0,0,24&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100,0,0,24&display=swap" rel="stylesheet"/>
+
 <style>
   /* Base Reset & Core Setting */
   body {
@@ -37,23 +43,62 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Ken Burns Hero Background Effect */
-  .bg-hero {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Grain Overlay */
+  .grain {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    background-image: 
-        linear-gradient(to bottom, rgba(5,5,5,0.7) 0%, rgba(5,5,5,0.95) 100%),
-        url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8jlAfvK1-GH2V1zM-D5WRTACeiOtYRWoHa5pjGguYX1gX5_h3hUiXonFyS-UwviHwwf81u_8dOzL211ErtIjMIIz7upONLll27owwYPtJ8uodokU6emDT3P534AZ5orhZ6F28j9gq6BJh7L5ikh26RXMD7QaxM9h0PBlQIjIrnCi45kv5GCQwXxl6SvRltjW_v_Yy28yj71wuQr_l1uh-qP2TR431HER_7wbnFBzMxcjh_aGXVHIrCHKx40_el4fqp_R9tPyQsZM");
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Reveal Animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Structural lines */
+  .hairline-b { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .hairline-r { border-right: 1px solid rgba(255, 255, 255, 0.1); }
+  .hairline-t { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+  /* B&W to Color Image */
+  .image-editorial {
+    filter: grayscale(100%) contrast(1.1) brightness(0.9);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .image-editorial:hover {
+    filter: grayscale(0%) contrast(1.05) brightness(1);
+    transform: scale(1.02);
+  }
+
+  /* Ken Burns bg */
+  .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); /* Luxury house proxy */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    animation: kenburns 40s infinite alternate ease-in-out;
-    transform-origin: center;
-    pointer-events: none;
+    top: 0; left: 0; right: 0; bottom: 0;
+    position: absolute;
+    z-index: 0;
+    animation: kenburns 30s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(5,5,5,0.7) 0%, rgba(5,5,5,1) 100%);
   }
 
   @keyframes kenburns {
@@ -61,203 +106,274 @@
     100% { transform: scale(1.1); }
   }
 
-  /* SVG Noise/Grain Overlay for editorial depth */
-  .grain {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 10;
-    opacity: 0.035;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  }
-
-  /* Structural Content Layer */
-  .content-layer {
-    position: relative;
-    z-index: 20;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Smooth Staggered Reveal Animations */
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-  }
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-  .delay-600 { animation-delay: 600ms; }
-  .delay-700 { animation-delay: 700ms; }
-  .delay-800 { animation-delay: 800ms; }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Luxury Link Hover Interaction */
-  .luxury-link {
+  /* Custom Hover Buttons */
+  .btn-luxury {
     position: relative;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: color 0.4s ease;
+    z-index: 1;
   }
-  
-  .luxury-link::before {
+  .btn-luxury::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 1px;
+    bottom: 0; left: 0; width: 0%; height: 100%;
     background-color: #D4AF37;
     transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: -1;
   }
-  
-  .luxury-link:hover {
-    background-color: rgba(255, 255, 255, 0.02);
-    padding-left: 1.5rem; /* Subttle indent on hover */
-  }
+  .btn-luxury:hover { color: #050505; }
+  .btn-luxury:hover::after { width: 100%; }
 
-  .luxury-link:hover::before {
-    width: 100%;
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
   }
-
-  /* Sharp Profile Box with B&W to Color reveal */
-  .profile-box {
-    filter: grayscale(80%) contrast(1.1) brightness(0.9);
-    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
   }
-  .profile-box:hover {
-    filter: grayscale(0%) contrast(1) brightness(1);
-    transform: scale(1.03);
-  }
-
-  /* Vertical/Horizontal Hairlines */
-  .glass-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1) 50%, transparent);
+  @keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
   }
 </style>
 </head>
-<body class="font-sans text-white/80 bg-background-dark selection:bg-primary selection:text-black">
-
-<!-- Background Layers -->
-<div class="bg-hero"></div>
+<body class="font-sans text-white/80 bg-background-dark antialiased">
 <div class="grain"></div>
 
-<!-- Main Content Wrapper -->
-<div class="content-layer px-8 py-10 md:py-16 max-w-2xl mx-auto w-full">
-  
-  <!-- Minimalist Header -->
-  <header class="flex justify-between items-center w-full mb-16 md:mb-24 reveal">
-    <button class="text-white/40 hover:text-white transition-colors duration-300 uppercase tracking-widest text-xs font-mono">
-      Esc
-    </button>
-    <button class="text-white/40 hover:text-white transition-colors duration-300 flex items-center justify-center p-2">
-      <span class="material-symbols-outlined font-light">menu</span>
-    </button>
-  </header>
+<!-- Header / Nav -->
+<header class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md hairline-b transition-all duration-300">
+  <div class="px-6 md:px-12 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-primary font-light text-2xl">architecture</span>
+      <span class="text-sm font-mono tracking-[0.2em] uppercase text-white">S. Romero</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-10 text-xs font-mono uppercase tracking-[0.1em] text-white/50">
+      <a href="#sobre-mi" class="hover:text-primary transition-colors">Sobre Mí</a>
+      <a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
+      <a href="#trayectoria" class="hover:text-primary transition-colors">Trayectoria</a>
+      <a href="#contacto" class="hover:text-primary transition-colors">Contacto</a>
+    </nav>
+    <a href="#contacto" class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-black transition-colors text-xs font-mono uppercase tracking-widest">
+      Agendar
+    </a>
+  </div>
+</header>
 
-  <main class="flex-1 flex flex-col justify-center">
+<main class="w-full">
+
+  <!-- Hero Section (Massive Typography & Ken Burns) -->
+  <section class="relative w-full h-screen flex flex-col justify-end pb-12 overflow-hidden">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
     
-    <!-- Hero Block Asymmetric -->
-    <div class="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-8 md:gap-10 items-end mb-16">
+    <div class="relative z-10 px-6 md:px-12 w-full flex flex-col items-start pt-32 h-full justify-between">
       
-      <!-- Profile Image Box (Sharp Edge) -->
-      <div class="relative w-36 h-48 md:w-full md:h-56 p-1 border border-white/10 reveal delay-100 group">
-        <div class="w-full h-full bg-cover bg-center profile-box overflow-hidden" 
-             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDU6kE_dzdOZ-7uNGo9W_b7El_pzqnutGjm8zm3EaHb7mZoNbe1_i3L5kFnALyHfkAKd-mE1891BJ9mDG9yt9j-j10ytrgpkZT-TNdiFBvfj6tQBw2CIMH2h0jjX7MEHA6VD5CZSPQxJBCjKkq-9AncvvmpcFfle2kHwCSQTVB85ZcYDJcwBU32Sakp9ou3aUtoI7g5Vi-bSr-OaunjlDX7paPmvfN3TgIt_yerBdnVjoYE6s-0Rc-xSeipDijWakmn1TmisPy3Vr8');">
+      <div class="flex flex-col gap-4 reveal active pt-20">
+        <div class="flex items-center gap-3">
+          <span class="block w-12 h-[1px] bg-primary"></span>
+          <span class="font-mono text-xs uppercase tracking-[0.3em] text-primary-light">Senior Real Estate Advisor</span>
         </div>
-        
-        <!-- Subtle Gold Accents on Corners -->
-        <div class="absolute -bottom-[1px] -right-[1px] w-3 h-3 border-b border-r border-primary transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:opacity-40 pointer-events-none"></div>
-        <div class="absolute -top-[1px] -left-[1px] w-3 h-3 border-t border-l border-primary transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:opacity-40 pointer-events-none"></div>
+        <div class="flex items-center gap-2 text-white/40 font-mono text-xs uppercase tracking-widest mt-2">
+          <span class="material-symbols-outlined text-[16px] font-light">location_on</span>
+          <span>Vilanova i la Geltrú &amp; Garraf</span>
+        </div>
       </div>
-      
-      <!-- Typographic Hierarchy -->
-      <div class="flex flex-col justify-center pb-2">
-        <div class="flex items-center gap-3 mb-6 reveal delay-200">
-          <span class="block w-6 h-[1px] bg-primary"></span>
-          <span class="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-mono text-primary-light">Senior Real Estate Advisor</span>
-        </div>
-        
-        <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-normal leading-[0.9] tracking-tight text-white mb-6 reveal delay-300">
-          Sebastián<br/><i class="font-serif text-primary">Romero</i>
+
+      <div class="flex flex-col md:flex-row items-end justify-between w-full pb-8">
+        <h1 class="font-serif text-[4rem] sm:text-[6rem] md:text-[8vw] leading-[0.85] tracking-tight text-white mb-6 md:mb-0 reveal active delay-200">
+          Sebastián<br/>
+          <span class="text-primary italic">Romero</span>
         </h1>
         
-        <div class="flex items-center gap-2 text-white/50 text-[11px] sm:text-xs uppercase tracking-widest reveal delay-400">
-          <span class="material-symbols-outlined text-[14px] font-light">location_on</span>
-          <span>Vilanova i la Geltrú, Spain</span>
+        <div class="max-w-sm reveal active delay-400">
+          <p class="text-white/60 font-light text-base leading-relaxed mb-8">
+            Asesor inmobiliario con <strong>+18 años de experiencia en construcción y reformas</strong>. Evalúo cada propiedad con ojo técnico para que compres, vendas o inviertas con seguridad absoluta.
+          </p>
+          <a href="#contacto" class="btn-luxury inline-flex items-center justify-center px-10 py-5 border border-white/20 text-sm uppercase tracking-widest font-mono group">
+            Consultar Ahora
+            <span class="material-symbols-outlined ml-4 group-hover:translate-x-2 transition-transform font-light">arrow_forward</span>
+          </a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Divider Line -->
-    <div class="w-full glass-divider mb-12 reveal delay-400"></div>
+  <!-- Editorial Stats Marquee / Banner -->
+  <div class="w-full bg-primary text-black py-4 hairline-b border-white/10 font-mono uppercase tracking-widest text-xs flex items-center overflow-hidden">
+    <div class="marquee whitespace-nowrap">
+      <span>18+ AÑOS EN CONSTRUCCIÓN Y REFORMAS — 8+ AÑOS DE EXPERIENCIA EN LA ZONA — 100+ REFORMAS GESTIONADAS CON ÉXITO — 1OO% COMPROMISO TÉCNICO Y TRANSPARENCIA — </span>
+    </div>
+  </div>
 
-    <!-- Navigation / Links Cluster -->
-    <nav class="flex flex-col w-full border-t border-white/5 reveal delay-500">
+  <!-- Sobre Mi Section -->
+  <section id="sobre-mi" class="relative w-full py-24 md:py-40 px-6 md:px-12 bg-background-dark">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
+      <div class="flex flex-col justify-center reveal">
+        <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-8">01. Mi Visión</div>
+        <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-8">
+          Veo lo que otros <i class="text-primary">no ven.</i>
+        </h2>
+        <div class="space-y-6 text-white/60 font-light text-lg leading-relaxed">
+          <p>
+            La mayoría de agentes inmobiliarios ven paredes y metros cuadrados. Yo veo estructuras, instalaciones, calidad de materiales y potencial de revalorización. 
+          </p>
+          <p>
+            Con más de <strong class="text-white font-normal">18 años ejecutando obras y reformas integrales</strong>, mi conocimiento técnico es tu mejor garantía al tomar una decisión inmobiliaria de alto nivel.
+          </p>
+          <p>
+            Nací en Uruguay, colaborando con gigantes como Stiler S.A. Llevo 8 años en España gestionando reformas integrales en el Garraf y Barcelona. Ahora pongo toda esa visión al servicio del mercado inmobiliario.
+          </p>
+        </div>
+      </div>
       
-      <a href="#" class="luxury-link group flex items-center justify-between py-6 md:py-8 px-2 border-b border-white/5">
-        <div class="flex items-center gap-6">
-          <span class="font-mono text-xs text-white/30 group-hover:text-primary transition-colors duration-500">01</span>
-          <span class="font-serif text-2xl md:text-3xl text-white/80 group-hover:text-white transition-colors duration-500 tracking-wide">Acerca de Mí</span>
+      <!-- Asymmetric Editorial Image Box -->
+      <div class="relative w-full aspect-[3/4] md:aspect-[4/5] p-2 border border-white/10 reveal delay-200">
+        <div class="w-full h-full bg-cover bg-center image-editorial overflow-hidden" 
+             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDU6kE_dzdOZ-7uNGo9W_b7El_pzqnutGjm8zm3EaHb7mZoNbe1_i3L5kFnALyHfkAKd-mE1891BJ9mDG9yt9j-j10ytrgpkZT-TNdiFBvfj6tQBw2CIMH2h0jjX7MEHA6VD5CZSPQxJBCjKkq-9AncvvmpcFfle2kHwCSQTVB85ZcYDJcwBU32Sakp9ou3aUtoI7g5Vi-bSr-OaunjlDX7paPmvfN3TgIt_yerBdnVjoYE6s-0Rc-xSeipDijWakmn1TmisPy3Vr8');">
         </div>
-        <span class="material-symbols-outlined text-white/20 group-hover:text-primary transform group-hover:translate-x-3 transition-all duration-500 font-light">trending_flat</span>
-      </a>
+        <!-- Decorative Frame -->
+        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-primary"></div>
+      </div>
+    </div>
 
-      <a href="#" class="luxury-link group flex items-center justify-between py-6 md:py-8 px-2 border-b border-white/5 reveal delay-600">
-        <div class="flex items-center gap-6">
-          <span class="font-mono text-xs text-white/30 group-hover:text-primary transition-colors duration-500">02</span>
-          <span class="font-serif text-2xl md:text-3xl text-white/80 group-hover:text-white transition-colors duration-500 tracking-wide">Agendar Consulta</span>
-        </div>
-        <span class="material-symbols-outlined text-white/20 group-hover:text-primary transform group-hover:translate-x-3 transition-all duration-500 font-light">trending_flat</span>
-      </a>
+    <!-- Features subgrid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32 hairline-t pt-16 reveal">
+      <div class="flex flex-col">
+        <div class="text-primary text-3xl mb-4 font-light"><span class="material-symbols-outlined text-[32px]">engineering</span></div>
+        <h4 class="font-serif text-2xl text-white mb-4">Valoración Técnica Real</h4>
+        <p class="text-white/50 text-sm font-light leading-relaxed">Detecto problemas estructurales, vicios ocultos y oportunidades de reforma que impactan directamente en el valor del inmueble.</p>
+      </div>
+      <div class="flex flex-col md:border-l border-white/10 md:pl-8">
+        <div class="text-primary text-3xl mb-4 font-light"><span class="material-symbols-outlined text-[32px]">handshake</span></div>
+        <h4 class="font-serif text-2xl text-white mb-4">Transparencia Total</h4>
+        <p class="text-white/50 text-sm font-light leading-relaxed">Comunicación directa, sin letra pequeña. Te explico cada detalle técnico y finaciero para que decidas con confianza absoluta.</p>
+      </div>
+      <div class="flex flex-col md:border-l border-white/10 md:pl-8">
+        <div class="text-primary text-3xl mb-4 font-light"><span class="material-symbols-outlined text-[32px]">trending_up</span></div>
+        <h4 class="font-serif text-2xl text-white mb-4">Visión de Inversión</h4>
+        <p class="text-white/50 text-sm font-light leading-relaxed">No solo miro un hogar, evalúo un activo. Uso mi formación en mercados financieros para asegurar que el capital que inviertes está protegido.</p>
+      </div>
+    </div>
+  </section>
 
-      <a href="#" class="luxury-link group flex items-center justify-between py-6 md:py-8 px-2 border-b border-white/5 reveal delay-700">
-        <div class="flex items-center gap-6">
-          <span class="font-mono text-xs text-white/30 group-hover:text-primary transition-colors duration-500">03</span>
-          <span class="font-serif text-2xl md:text-3xl text-white/80 group-hover:text-white transition-colors duration-500 tracking-wide">Contacto WhatsApp</span>
-        </div>
-        <span class="material-symbols-outlined text-white/20 group-hover:text-primary transform group-hover:translate-x-3 transition-all duration-500 font-light">trending_flat</span>
-      </a>
+  <!-- Servicios Section -->
+  <section id="servicios" class="relative w-full py-24 px-6 md:px-12 bg-surface-dark hairline-t">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 reveal">
+      <div>
+        <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">02. Mi Expertise</div>
+        <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">Servicios<br/><i class="text-primary">Inmobiliarios</i></h2>
+      </div>
+      <p class="text-white/50 max-w-sm text-sm font-light mt-6 md:mt-0">Asesoramiento integral en cada fase de tu operación, respaldado por conocimiento técnico real de la arquitectura interior.</p>
+    </div>
 
-      <a href="#" class="luxury-link group flex items-center justify-between py-6 md:py-8 px-2 border-b border-white/5 reveal delay-800">
-        <div class="flex items-center gap-6">
-          <span class="font-mono text-xs text-white/30 group-hover:text-primary transition-colors duration-500">04</span>
-          <span class="font-serif text-2xl md:text-3xl text-white/80 group-hover:text-white transition-colors duration-500 tracking-wide">Exclusivas en Venta</span>
-        </div>
-        <span class="material-symbols-outlined text-white/20 group-hover:text-primary transform group-hover:translate-x-3 transition-all duration-500 font-light">trending_flat</span>
-      </a>
+    <div class="grid grid-cols-1 md:grid-cols-3 hairline-t hairline-l">
+      <!-- 1 -->
+      <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/5 transition-colors duration-500 reveal">
+        <span class="font-mono text-xs text-primary/50 mb-8 block">/ 01</span>
+        <h3 class="font-serif text-3xl text-white mb-6">Compra de Inmuebles</h3>
+        <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Te acompaño en la búsqueda y evaluación técnica. Inspecciono personalmente cada propiedad para que inviertas con máxima seguridad.</p>
+        <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Inspección In Situ</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Análisis de Mercado</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Negociación Técnica</li>
+        </ul>
+      </div>
+      <!-- 2 -->
+      <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/5 transition-colors duration-500 reveal delay-200">
+        <span class="font-mono text-xs text-primary/50 mb-8 block">/ 02</span>
+        <h3 class="font-serif text-3xl text-white mb-6">Venta Estratégica</h3>
+        <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Maximizo el valor de tu propiedad con una evaluación técnica precisa y un gran plan de marketing adaptado a Vilanova y Garraf.</p>
+        <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Valoración Precisa</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Mejoras Pre-Venta</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Marketing Inmobiliario</li>
+        </ul>
+      </div>
+      <!-- 3 -->
+      <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/5 transition-colors duration-500 reveal delay-400">
+        <span class="font-mono text-xs text-primary/50 mb-8 block">/ 03</span>
+        <h3 class="font-serif text-3xl text-white mb-6">Reforma e Inversión</h3>
+        <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Identifico oportunidades con potencial. Presupuesto la obra, superviso la ejecución y diseño la estrategia para optimizar tu ROI.</p>
+        <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Detección de Activos</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Gestión de Obra</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Análisis ROI Completo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    </nav>
-  </main>
-
-  <!-- Minimalist Footer -->
-  <footer class="mt-20 pt-8 flex items-center justify-between reveal delay-800 border-t border-white/10">
-    <div class="flex gap-6">
-      <a href="#" class="text-white/40 hover:text-primary transition-colors duration-300">
-        <span class="material-symbols-outlined text-xl font-light">mail</span>
-      </a>
-      <a href="#" class="text-white/40 hover:text-primary transition-colors duration-300">
-        <span class="material-symbols-outlined text-xl font-light">share</span>
-      </a>
-      <a href="#" class="text-white/40 hover:text-primary transition-colors duration-300">
-        <span class="material-symbols-outlined text-xl font-light">language</span>
+  <!-- Diferencial / CTA -->
+  <section class="relative py-32 px-6 md:px-12 bg-primary">
+    <!-- Texture overlay -->
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center reveal">
+      <h2 class="font-serif text-5xl md:text-7xl text-black leading-tight mb-8">El conocimiento edifica<br/><i class="font-light">el éxito.</i></h2>
+      <p class="text-black/70 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto">No busco cerrar operaciones rápidamente, busco cerrarlas a la perfección. Mi reputación se construye sobre los cimientos de cada cliente satisfecho.</p>
+      
+      <a href="https://wa.me/34655486343" target="_blank" class="inline-flex items-center justify-center px-12 py-6 bg-black text-primary text-sm uppercase tracking-[0.2em] font-mono hover:bg-white hover:text-black transition-colors duration-500 shadow-2xl">
+        Conversar por WhatsApp
       </a>
     </div>
-    <div class="font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">
-      Sebastián Romero © 2026
+  </section>
+
+  <!-- Contacto & Footer -->
+  <footer id="contacto" class="bg-background-dark pt-32 pb-12 px-6 md:px-12 hairline-t">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-24 max-w-6xl mx-auto reveal">
+      <div>
+        <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">Contáctame</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-white mb-10">¿Hablamos sobre<br/><i class="text-primary">tu futuro inmueble?</i></h2>
+        <a href="mailto:deco.dormirefointegales@gmail.com" class="text-xl md:text-2xl text-white/80 hover:text-primary transition-colors font-light block mb-4">deco.dormirefointegales@gmail.com</a>
+        <a href="tel:+34655486343" class="text-xl md:text-2xl text-white/80 hover:text-primary transition-colors font-light block">+34 655 486 343</a>
+      </div>
+      <div class="flex flex-col justify-end items-start md:items-end">
+        <p class="text-white/40 font-mono text-xs uppercase tracking-widest text-left md:text-right mb-4">Disponible Lunes - Viernes<br/>9:00 - 20:00</p>
+        <p class="text-white/40 font-mono text-xs uppercase tracking-widest text-left md:text-right">Vilanova i la Geltrú<br/>Barcelona, Spain</p>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="flex flex-col md:flex-row items-center justify-between pt-8 hairline-t reveal">
+      <div class="flex items-center gap-2 mb-6 md:mb-0">
+        <span class="material-symbols-outlined text-primary text-xl">architecture</span>
+        <span class="font-serif text-lg text-white">S. Romero</span>
+      </div>
+      <div class="flex gap-8 mb-6 md:mb-0">
+        <a href="#" class="text-white/30 hover:text-primary transition-colors text-sm uppercase font-mono">Instagram</a>
+        <a href="#" class="text-white/30 hover:text-primary transition-colors text-sm uppercase font-mono">LinkedIn</a>
+        <a href="/linktree/" class="text-primary hover:text-white transition-colors text-sm uppercase font-mono underline underline-offset-4 decoration-primary/50">Ver Linktree</a>
+      </div>
+      <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/20">
+        Sebastián Romero © 2026. All rights reserved.
+      </div>
     </div>
   </footer>
 
-</div>
+</main>
+
+<!-- Scroll Animations Observer Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Optional: Stop observing once revealed
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>
 </body>
 </html>
