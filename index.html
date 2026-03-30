@@ -252,6 +252,26 @@
 <div class="grain"></div>
 
 <!-- ═══════════════════════════════════════════
+     COOKIE BANNER
+════════════════════════════════════════════ -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[300] hidden">
+  <div class="bg-[#07111f] border-t border-white/10 px-5 py-4 md:px-8 md:py-5">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+      <p class="text-white/60 text-xs font-light leading-relaxed max-w-2xl">
+        Este sitio utiliza <strong class="text-white/80 font-normal">Google Fonts</strong> (tipografías técnicas) y una cookie propia para recordar tu preferencia. No hay rastreo ni publicidad.
+        <a href="/legal.html#cookies" class="text-accent underline underline-offset-2 hover:text-accent-light transition-colors ml-1">Más información</a>
+      </p>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <a href="/legal.html#cookies" class="font-mono text-[10px] uppercase tracking-widest text-white/30 hover:text-white/60 transition-colors whitespace-nowrap">Ver política</a>
+        <button onclick="acceptCookies()" class="font-mono text-xs uppercase tracking-widest bg-accent text-background-dark px-5 py-2.5 hover:bg-accent-light transition-colors whitespace-nowrap">
+          Aceptar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
      FLOATING WHATSAPP BUTTON
 ════════════════════════════════════════════ -->
 <a href="https://wa.me/34655486343?text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20una%20consulta%20inmobiliaria" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Contactar por WhatsApp">
@@ -610,6 +630,7 @@
       <a href="#" class="text-white/30 hover:text-accent transition-colors text-xs font-mono uppercase tracking-widest">Instagram</a>
       <a href="#" class="text-white/30 hover:text-accent transition-colors text-xs font-mono uppercase tracking-widest">LinkedIn</a>
       <a href="/linktree/" class="text-accent hover:text-white transition-colors text-xs font-mono uppercase tracking-widest underline underline-offset-4 decoration-accent/40">Links</a>
+      <a href="/legal.html" class="text-white/30 hover:text-accent transition-colors text-xs font-mono uppercase tracking-widest">Legal</a>
     </div>
     <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/20">Sebastián Romero &copy; 2026</p>
   </div>
@@ -633,6 +654,19 @@
     nav.classList.toggle('open');
     document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
   }
+
+  // ── Cookie banner ──
+  function acceptCookies() {
+    localStorage.setItem('cookie_consent', 'accepted');
+    document.getElementById('cookie-banner').classList.add('hidden');
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(() => {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }, 1500);
+    }
+  });
 </script>
 </body>
 </html>
