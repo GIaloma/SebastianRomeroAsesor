@@ -3,11 +3,75 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sebastián Romero | Asesor Inmobiliario Luxury en Vilanova i la Geltrú</title>
-<meta name="description" content="Asesor inmobiliario en Vilanova i la Geltrú y la costa del Garraf con +18 años de experiencia en construcción y reformas. Evalúo propiedades con ojo técnico. Compra, venta e inversión inmobiliaria."/>
 
-<!-- Let's keep the structured data and other SEO meta tags the same for context -->
+<!-- ═══════════════════════════════════════════
+     SEO & GEO META TAGS
+════════════════════════════════════════════ -->
+<title>Sebastián Romero | Asesor Inmobiliario en Vilanova i la Geltrú y el Garraf</title>
+<meta name="description" content="Asesor inmobiliario en Vilanova i la Geltrú y la costa del Garraf con +18 años de experiencia en construcción y reformas integrales. Compra, venta e inversión inmobiliaria con valoración técnica real."/>
+<meta name="keywords" content="asesor inmobiliario Vilanova i la Geltrú, inmobiliaria Garraf, agente inmobiliario Vilanova, comprar piso Vilanova i la Geltrú, pisos en venta Vilanova, reformas integrales Barcelona, inversión inmobiliaria Garraf, Sitges inmobiliaria, Cubelles pisos"/>
+<meta name="author" content="Sebastián Romero"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://sebastianromero.com"/>
 
+<!-- Open Graph -->
+<meta property="og:title" content="Sebastián Romero | Asesor Inmobiliario con Visión Técnica"/>
+<meta property="og:description" content="Asesor inmobiliario en Vilanova i la Geltrú con +18 años en construcción. Evalúo lo que otros no ven."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:url" content="https://sebastianromero.com"/>
+<!-- <meta property="og:image" content="https://sebastianromero.com/og-image.jpg"/> -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sebastián Romero | Asesor Inmobiliario Vilanova i la Geltrú"/>
+<meta name="twitter:description" content="Más de 18 años en construcción y reformas. Compra, vende e invierte con criterio técnico real en el Garraf."/>
+
+<!-- GEO Tags -->
+<meta name="geo.region" content="ES-CT"/>
+<meta name="geo.placename" content="Vilanova i la Geltrú"/>
+<meta name="geo.position" content="41.2239;1.7256"/>
+<meta name="ICBM" content="41.2239, 1.7256"/>
+
+<!-- Schema.org Structured Data (for Google & LLMs/GEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Sebastián Romero",
+  "description": "Asesor inmobiliario en Vilanova i la Geltrú y la costa del Garraf con más de 18 años de experiencia en construcción, reformas integrales y gestión de proyectos técnicos. Especializado en valoración técnica de propiedades, compraventa e inversión inmobiliaria.",
+  "url": "https://sebastianromero.com",
+  "telephone": "+34655486343",
+  "email": "deco.dormirefointegales@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vilanova i la Geltrú",
+    "addressRegion": "Barcelona",
+    "addressCountry": "ES"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Vilanova i la Geltrú"},
+    {"@type": "AdministrativeArea", "name": "Garraf"},
+    {"@type": "City", "name": "Sitges"},
+    {"@type": "City", "name": "Cubelles"},
+    {"@type": "City", "name": "Cunit"},
+    {"@type": "City", "name": "Barcelona"}
+  ],
+  "knowsAbout": [
+    "Compraventa de inmuebles",
+    "Valoración técnica de propiedades",
+    "Reformas integrales",
+    "Inversión inmobiliaria",
+    "Construcción residencial",
+    "Gestión de proyectos de obra"
+  ],
+  "knowsLanguage": ["es", "ca", "en"]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════
+     STYLES & FONTS
+════════════════════════════════════════════ -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
   tailwind.config = {
@@ -15,365 +79,548 @@
     theme: {
       extend: {
         colors: {
-          "primary": "#6B8EAD", /* Slate/Coastal Blue accent for luxury */
-          "primary-light": "#A4BFD9", /* Soft Ice Blue */
-          "background-dark": "#030A16", /* Deepest Abyssal Navy */
-          "surface-dark": "#061022",
-          "surface-light": "#0B1830",
+          "primary":       "#6B8EAD", /* Coastal Blue — structural */
+          "primary-light": "#A4BFD9",
+          "accent":        "#C9A84C", /* Gold — action/CTA */
+          "accent-light":  "#E8D08A",
+          "background-dark": "#030A16",
+          "surface-dark":    "#061022",
+          "surface-light":   "#0B1830",
         },
         fontFamily: {
-          "sans": ["Inter", "sans-serif"],
+          "sans":  ["Inter", "sans-serif"],
           "serif": ["Playfair Display", "serif"],
-          "mono": ["JetBrains Mono", "monospace"],
+          "mono":  ["JetBrains Mono", "monospace"],
         },
       },
     },
   }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@100;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@100;300;400&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100,0,0,24&display=swap" rel="stylesheet"/>
 
 <style>
-  /* Base Reset & Core Setting */
+  html { scroll-behavior: smooth; }
+
   body {
-    background-color: #050505;
+    background-color: #030A16;
     color: #ffffff;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  html {
-    scroll-behavior: smooth;
-  }
 
-  /* Grain Overlay */
+  /* ── Grain overlay ── */
   .grain {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    inset: 0;
     pointer-events: none;
-    z-index: 50;
+    z-index: 100;
     opacity: 0.04;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* Reveal Animations */
+  /* ── Scroll reveal ── */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.15s; }
+  .reveal-delay-2 { transition-delay: 0.30s; }
+  .reveal-delay-3 { transition-delay: 0.45s; }
 
-  /* Structural lines */
-  .hairline-b { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-  .hairline-r { border-right: 1px solid rgba(255, 255, 255, 0.1); }
-  .hairline-t { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  /* ── Hairlines ── */
+  .hairline-b { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .hairline-t { border-top:    1px solid rgba(255,255,255,0.08); }
+  .hairline-l { border-left:   1px solid rgba(255,255,255,0.08); }
+  .hairline-r { border-right:  1px solid rgba(255,255,255,0.08); }
 
-  /* B&W to Color Image */
-  .image-editorial {
-    filter: grayscale(100%) contrast(1.1) brightness(0.9);
-    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .image-editorial:hover {
-    filter: grayscale(0%) contrast(1.05) brightness(1);
-    transform: scale(1.02);
-  }
-
-  /* Ken Burns bg */
+  /* ── Ken Burns hero ── */
   .hero-bg {
-    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); /* Luxury house proxy */
+    position: absolute; inset: 0; z-index: 0;
+    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80');
     background-size: cover;
     background-position: center;
-    top: 0; left: 0; right: 0; bottom: 0;
-    position: absolute;
-    z-index: 0;
-    animation: kenburns 30s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+    animation: kenburns 30s infinite alternate cubic-bezier(0.4,0,0.2,1);
   }
-  
   .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(180deg, rgba(5,5,5,0.7) 0%, rgba(5,5,5,1) 100%);
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(180deg, rgba(3,10,22,0.65) 0%, rgba(3,10,22,1) 100%);
   }
-
   @keyframes kenburns {
-    0% { transform: scale(1); }
+    0%   { transform: scale(1); }
     100% { transform: scale(1.1); }
   }
 
-  /* Custom Hover Buttons */
+  /* ── Luxury fill-button ── */
   .btn-luxury {
-    position: relative;
-    overflow: hidden;
-    transition: color 0.4s ease;
-    z-index: 1;
+    position: relative; overflow: hidden;
+    transition: color 0.4s ease; z-index: 1;
   }
   .btn-luxury::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; width: 0%; height: 100%;
-    background-color: #6B8EAD;
-    transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-    z-index: -1;
+    content: ''; position: absolute;
+    bottom: 0; left: 0; width: 0; height: 100%;
+    background-color: #C9A84C;
+    transition: width 0.5s cubic-bezier(0.2,0.8,0.2,1); z-index: -1;
   }
-  .btn-luxury:hover { color: #050505; }
+  .btn-luxury:hover { color: #030A16; }
   .btn-luxury:hover::after { width: 100%; }
 
-  .marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
+  /* ── Gold fill-button variant ── */
+  .btn-gold {
+    position: relative; overflow: hidden;
+    transition: color 0.4s ease; z-index: 1;
   }
-  .marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 20s linear infinite;
+  .btn-gold::after {
+    content: ''; position: absolute;
+    bottom: 0; left: 0; width: 0; height: 100%;
+    background-color: #030A16;
+    transition: width 0.5s cubic-bezier(0.2,0.8,0.2,1); z-index: -1;
   }
-  @keyframes marquee {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+  .btn-gold:hover { color: #C9A84C; }
+  .btn-gold:hover::after { width: 100%; }
+
+  /* ── Marquee ── */
+  .marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 24s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── B&W to color image ── */
+  .img-editorial {
+    filter: grayscale(100%) contrast(1.1) brightness(0.85);
+    transition: filter 1s cubic-bezier(0.2,0.8,0.2,1), transform 1s cubic-bezier(0.2,0.8,0.2,1);
   }
+  .img-editorial:hover { filter: grayscale(0%) contrast(1.02) brightness(1); transform: scale(1.02); }
+
+  /* ── Timeline ── */
+  .timeline-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #C9A84C;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .timeline-dot.active {
+    box-shadow: 0 0 0 5px rgba(201,168,76,0.25), 0 0 14px rgba(201,168,76,0.4);
+  }
+
+  /* ── Floating WhatsApp ── */
+  .fab-whatsapp {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: 58px; height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+    z-index: 200;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .fab-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 32px rgba(37,211,102,0.6);
+  }
+  .fab-whatsapp svg { width: 28px; height: 28px; fill: white; }
+
+  /* ── Mobile nav overlay ── */
+  #mobile-nav {
+    position: fixed; inset: 0; z-index: 150;
+    background: rgba(3,10,22,0.98);
+    backdrop-filter: blur(16px);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; gap: 2rem;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  #mobile-nav.open { opacity: 1; pointer-events: all; }
+  #mobile-nav a {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  #mobile-nav a:hover { color: #C9A84C; }
 </style>
 </head>
+
 <body class="font-sans text-white/80 bg-background-dark antialiased">
 <div class="grain"></div>
 
-<!-- Header / Nav -->
+<!-- ═══════════════════════════════════════════
+     FLOATING WHATSAPP BUTTON
+════════════════════════════════════════════ -->
+<a href="https://wa.me/34655486343?text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20una%20consulta%20inmobiliaria" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ═══════════════════════════════════════════
+     MOBILE NAV OVERLAY
+════════════════════════════════════════════ -->
+<nav id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <button onclick="toggleNav()" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors" aria-label="Cerrar menú">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+  <a href="#sobre-mi"    onclick="toggleNav()">Sobre Mí</a>
+  <a href="#servicios"   onclick="toggleNav()">Servicios</a>
+  <a href="#trayectoria" onclick="toggleNav()">Trayectoria</a>
+  <a href="#contacto"    onclick="toggleNav()">Contacto</a>
+  <a href="https://wa.me/34655486343" target="_blank" rel="noopener" style="color:#C9A84C; font-size:1.2rem; letter-spacing:0.1em; font-family:'JetBrains Mono',monospace; margin-top:1rem;">
+    +34 655 486 343
+  </a>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════ -->
 <header class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md hairline-b transition-all duration-300">
   <div class="px-6 md:px-12 py-5 flex items-center justify-between">
     <div class="flex items-center gap-4">
-      <span class="material-symbols-outlined text-primary font-light text-2xl">architecture</span>
+      <span class="material-symbols-outlined text-accent font-light text-2xl">architecture</span>
       <span class="text-sm font-mono tracking-[0.2em] uppercase text-white">S. Romero</span>
     </div>
     <nav class="hidden md:flex items-center gap-10 text-xs font-mono uppercase tracking-[0.1em] text-white/50">
-      <a href="#sobre-mi" class="hover:text-primary transition-colors">Sobre Mí</a>
-      <a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
-      <a href="#trayectoria" class="hover:text-primary transition-colors">Trayectoria</a>
-      <a href="#contacto" class="hover:text-primary transition-colors">Contacto</a>
+      <a href="#sobre-mi"    class="hover:text-accent transition-colors">Sobre Mí</a>
+      <a href="#servicios"   class="hover:text-accent transition-colors">Servicios</a>
+      <a href="#trayectoria" class="hover:text-accent transition-colors">Trayectoria</a>
+      <a href="#contacto"    class="hover:text-accent transition-colors">Contacto</a>
     </nav>
-    <a href="#contacto" class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-black transition-colors text-xs font-mono uppercase tracking-widest">
-      Agendar
-    </a>
+    <div class="flex items-center gap-3">
+      <a href="#contacto" class="hidden md:inline-flex px-6 py-3 border border-accent text-accent btn-gold text-xs font-mono uppercase tracking-widest">
+        Agendar
+      </a>
+      <!-- Hamburger (mobile) -->
+      <button onclick="toggleNav()" class="md:hidden flex flex-col gap-[5px] p-2 group" aria-label="Abrir menú">
+        <span class="block w-6 h-[1.5px] bg-white/70 transition-all group-hover:bg-accent"></span>
+        <span class="block w-4 h-[1.5px] bg-white/70 transition-all group-hover:bg-accent group-hover:w-6"></span>
+        <span class="block w-6 h-[1.5px] bg-white/70 transition-all group-hover:bg-accent"></span>
+      </button>
+    </div>
   </div>
 </header>
 
 <main class="w-full">
 
-  <!-- Hero Section (Massive Typography & Ken Burns) -->
-  <section class="relative w-full h-screen flex flex-col justify-end pb-12 overflow-hidden">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    
-    <div class="relative z-10 px-6 md:px-12 w-full flex flex-col items-start pt-32 h-full justify-between">
-      
-      <div class="flex flex-col gap-4 reveal active pt-20">
-        <div class="flex items-center gap-3">
-          <span class="block w-12 h-[1px] bg-primary"></span>
-          <span class="font-mono text-xs uppercase tracking-[0.3em] text-primary-light">Senior Real Estate Advisor</span>
-        </div>
-        <div class="flex items-center gap-2 text-white/40 font-mono text-xs uppercase tracking-widest mt-2">
-          <span class="material-symbols-outlined text-[16px] font-light">location_on</span>
-          <span>Vilanova i la Geltrú &amp; Garraf</span>
-        </div>
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="relative w-full h-screen flex flex-col justify-end pb-12 overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="relative z-10 px-6 md:px-12 w-full flex flex-col h-full justify-between">
+    <div class="flex flex-col gap-4 pt-28 md:pt-32 reveal active">
+      <div class="flex items-center gap-3">
+        <span class="block w-10 h-[1px] bg-accent"></span>
+        <span class="font-mono text-xs uppercase tracking-[0.3em] text-accent-light">Asesor Inmobiliario Senior</span>
       </div>
-
-      <div class="flex flex-col md:flex-row items-end justify-between w-full pb-8">
-        <h1 class="font-serif text-[4rem] sm:text-[6rem] md:text-[8vw] leading-[0.85] tracking-tight text-white mb-6 md:mb-0 reveal active delay-200">
-          Sebastián<br/>
-          <span class="text-primary italic">Romero</span>
-        </h1>
-        
-        <div class="max-w-sm reveal active delay-400">
-          <p class="text-white/60 font-light text-base leading-relaxed mb-8">
-            Asesor inmobiliario con <strong>+18 años de experiencia en construcción y reformas</strong>. Evalúo cada propiedad con ojo técnico para que compres, vendas o inviertas con seguridad absoluta.
-          </p>
-          <a href="#contacto" class="btn-luxury inline-flex items-center justify-center px-10 py-5 border border-white/20 text-sm uppercase tracking-widest font-mono group">
-            Consultar Ahora
-            <span class="material-symbols-outlined ml-4 group-hover:translate-x-2 transition-transform font-light">arrow_forward</span>
-          </a>
-        </div>
+      <div class="flex items-center gap-2 text-white/40 font-mono text-xs uppercase tracking-widest mt-1">
+        <span class="material-symbols-outlined text-[15px] font-light">location_on</span>
+        <span>Vilanova i la Geltrú &amp; Costa del Garraf</span>
       </div>
     </div>
-  </section>
+    <div class="flex flex-col md:flex-row items-end justify-between w-full pb-8">
+      <h1 class="font-serif text-[4rem] sm:text-[6rem] md:text-[8vw] leading-[0.85] tracking-tight text-white mb-6 md:mb-0 reveal active reveal-delay-1">
+        Sebastián<br/>
+        <em class="text-accent not-italic">Romero</em>
+      </h1>
+      <div class="max-w-sm reveal active reveal-delay-2">
+        <p class="text-white/60 font-light text-base leading-relaxed mb-8">
+          Asesor inmobiliario con <strong class="text-white font-normal">+18 años de experiencia en construcción y reformas</strong>. Evalúo cada propiedad con ojo técnico para que compres, vendas o inviertas con seguridad absoluta.
+        </p>
+        <a href="#contacto" class="btn-luxury inline-flex items-center gap-4 px-10 py-5 border border-white/20 text-sm uppercase tracking-widest font-mono group">
+          Consultar Ahora
+          <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform font-light">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Editorial Stats Marquee / Banner -->
-  <div class="w-full bg-primary text-black py-4 hairline-b border-white/10 font-mono uppercase tracking-widest text-xs flex items-center overflow-hidden">
-    <div class="marquee whitespace-nowrap">
-      <span>18+ AÑOS EN CONSTRUCCIÓN Y REFORMAS — 8+ AÑOS DE EXPERIENCIA EN LA ZONA — 100+ REFORMAS GESTIONADAS CON ÉXITO — 1OO% COMPROMISO TÉCNICO Y TRANSPARENCIA — </span>
+<!-- ═══════════════════════════════════════════
+     MARQUEE STATS BANNER
+════════════════════════════════════════════ -->
+<div class="w-full bg-accent text-background-dark py-4 overflow-hidden hairline-b border-white/10">
+  <div class="marquee-track font-mono uppercase tracking-widest text-xs font-medium">
+    <span class="px-12">18+ Años en Construcción y Reformas</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">8+ Años en Vilanova &amp; el Garraf</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">100+ Reformas Gestionadas</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">Valoración Técnica Real de Propiedades</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">18+ Años en Construcción y Reformas</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">8+ Años en Vilanova &amp; el Garraf</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">100+ Reformas Gestionadas</span>
+    <span class="px-4 opacity-40">·</span>
+    <span class="px-12">Valoración Técnica Real de Propiedades</span>
+    <span class="px-4 opacity-40">·</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SOBRE MÍ
+════════════════════════════════════════════ -->
+<section id="sobre-mi" class="relative w-full py-24 md:py-40 px-6 md:px-12 bg-background-dark">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
+    <div class="flex flex-col justify-center reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-8">01 / Mi Visión</div>
+      <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-8">
+        Veo lo que otros <em class="text-accent">no ven.</em>
+      </h2>
+      <div class="space-y-5 text-white/60 font-light text-base leading-relaxed">
+        <p>La mayoría de agentes inmobiliarios ven paredes y metros cuadrados. Yo veo estructuras, instalaciones, calidad de materiales y potencial de revalorización.</p>
+        <p>Con más de <strong class="text-white font-normal">18 años ejecutando obras y reformas integrales</strong>, mi conocimiento técnico es tu mejor garantía al tomar una decisión inmobiliaria.</p>
+        <p>Nacido en Uruguay, donde empecé a trabajar en construcción a gran escala con <strong class="text-white font-normal">Stiler S.A.</strong> Llevo 8 años en España gestionando reformas en el Garraf y Barcelona. Ahora pongo toda esa visión al servicio del mercado inmobiliario de <strong class="text-white font-normal">Vilanova i la Geltrú</strong>.</p>
+      </div>
+    </div>
+    <div class="relative w-full aspect-[3/4] md:aspect-[4/5] p-[3px] border border-white/10 reveal reveal-delay-1">
+      <!-- Photo placeholder — replace src when available -->
+      <div class="w-full h-full img-editorial overflow-hidden bg-surface-dark flex items-center justify-center">
+        <span class="material-symbols-outlined text-white/10" style="font-size:7rem;">person</span>
+      </div>
+      <div class="absolute -bottom-4 -right-4 w-20 h-20 border-b border-r border-accent opacity-60"></div>
+      <div class="absolute -top-4 -left-4 w-20 h-20 border-t border-l border-accent opacity-60"></div>
     </div>
   </div>
 
-  <!-- Sobre Mi Section -->
-  <section id="sobre-mi" class="relative w-full py-24 md:py-40 px-6 md:px-12 bg-background-dark">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
-      <div class="flex flex-col justify-center reveal">
-        <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-8">01. Mi Visión</div>
-        <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-8">
-          Veo lo que otros <i class="text-primary">no ven.</i>
-        </h2>
-        <div class="space-y-6 text-white/60 font-light text-lg leading-relaxed">
-          <p>
-            La mayoría de agentes inmobiliarios ven paredes y metros cuadrados. Yo veo estructuras, instalaciones, calidad de materiales y potencial de revalorización. 
-          </p>
-          <p>
-            Con más de <strong class="text-white font-normal">18 años ejecutando obras y reformas integrales</strong>, mi conocimiento técnico es tu mejor garantía al tomar una decisión inmobiliaria de alto nivel.
-          </p>
-          <p>
-            Nací en Uruguay, colaborando con gigantes como Stiler S.A. Llevo 8 años en España gestionando reformas integrales en el Garraf y Barcelona. Ahora pongo toda esa visión al servicio del mercado inmobiliario.
-          </p>
-        </div>
+  <!-- 3-column features -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-0 mt-28 hairline-t pt-16 reveal">
+    <div class="flex flex-col pr-0 md:pr-12 pb-12 md:pb-0">
+      <span class="material-symbols-outlined text-accent text-[32px] mb-5">engineering</span>
+      <h4 class="font-serif text-2xl text-white mb-3">Valoración Técnica Real</h4>
+      <p class="text-white/50 text-sm font-light leading-relaxed">Detecto problemas estructurales, vicios ocultos y oportunidades de reforma que impactan directamente en el valor del inmueble.</p>
+    </div>
+    <div class="flex flex-col px-0 md:px-12 py-12 md:py-0 hairline-t hairline-b md:hairline-t-0 md:hairline-b-0 md:hairline-l md:hairline-r">
+      <span class="material-symbols-outlined text-accent text-[32px] mb-5">handshake</span>
+      <h4 class="font-serif text-2xl text-white mb-3">Transparencia Total</h4>
+      <p class="text-white/50 text-sm font-light leading-relaxed">Comunicación directa, sin letra pequeña. Te explico cada detalle técnico y financiero para que decidas con confianza.</p>
+    </div>
+    <div class="flex flex-col pl-0 md:pl-12 pt-12 md:pt-0">
+      <span class="material-symbols-outlined text-accent text-[32px] mb-5">trending_up</span>
+      <h4 class="font-serif text-2xl text-white mb-3">Visión de Inversión</h4>
+      <p class="text-white/50 text-sm font-light leading-relaxed">Formación en mercados financieros e inversiones inmobiliarias para evaluar cada operación como activo, no solo como vivienda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICIOS
+════════════════════════════════════════════ -->
+<section id="servicios" class="relative w-full py-24 px-6 md:px-12 bg-surface-dark hairline-t">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 reveal">
+    <div>
+      <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">02 / Mi Expertise</div>
+      <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">Servicios<br/><em class="text-accent">Inmobiliarios</em></h2>
+    </div>
+    <p class="text-white/50 max-w-xs text-sm font-light mt-6 md:mt-0">Asesoramiento integral en cada fase de tu operación, respaldado por conocimiento técnico real de la arquitectura interior.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 hairline-t hairline-l">
+    <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/[0.03] transition-colors duration-500 reveal">
+      <span class="font-mono text-xs text-accent/40 mb-8 block">/ 01</span>
+      <h3 class="font-serif text-3xl text-white mb-5">Compra de<br/>Inmuebles</h3>
+      <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Te acompaño en la búsqueda y evaluación técnica. Inspecciono personalmente cada propiedad para que inviertas con máxima seguridad en el Garraf.</p>
+      <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Inspección In Situ</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Análisis de Mercado</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Negociación Técnica</li>
+      </ul>
+    </div>
+    <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/[0.03] transition-colors duration-500 reveal reveal-delay-1">
+      <span class="font-mono text-xs text-accent/40 mb-8 block">/ 02</span>
+      <h3 class="font-serif text-3xl text-white mb-5">Venta<br/>Estratégica</h3>
+      <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Maximizo el valor de tu propiedad con una evaluación técnica precisa y un plan de marketing adaptado a Vilanova y toda la costa del Garraf.</p>
+      <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Valoración Precisa</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Plan de Mejoras Pre-Venta</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Marketing Inmobiliario</li>
+      </ul>
+    </div>
+    <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/[0.03] transition-colors duration-500 reveal reveal-delay-2">
+      <span class="font-mono text-xs text-accent/40 mb-8 block">/ 03</span>
+      <h3 class="font-serif text-3xl text-white mb-5">Reforma<br/>e Inversión</h3>
+      <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Identifico propiedades con potencial de revalorización. Presupuesto la obra, superviso la ejecución y calculo el retorno de inversión.</p>
+      <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Detección de Activos</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Gestión Integral de Obra</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent flex-shrink-0"></span> Análisis ROI Completo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TRAYECTORIA
+════════════════════════════════════════════ -->
+<section id="trayectoria" class="relative w-full py-24 px-6 md:px-12 bg-background-dark hairline-t">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 reveal">
+    <div>
+      <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">03 / Mi Recorrido</div>
+      <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">18 Años<br/><em class="text-accent">Construyendo</em></h2>
+    </div>
+    <p class="text-white/50 max-w-xs text-sm font-light mt-6 md:mt-0">Literalmente desde los cimientos. Una trayectoria técnica ininterrumpida que ahora se convierte en tu ventaja al negociar.</p>
+  </div>
+
+  <!-- Timeline -->
+  <div class="max-w-4xl mx-auto">
+    <!-- Item 1 -->
+    <div class="grid grid-cols-[10px_1fr] md:grid-cols-[10px_180px_1fr] gap-6 md:gap-12 pb-16 reveal">
+      <div class="flex flex-col items-center">
+        <div class="timeline-dot"></div>
+        <div class="flex-1 w-[1px] bg-accent/20 mt-3"></div>
       </div>
-      
-      <!-- Asymmetric Editorial Image Box -->
-      <div class="relative w-full aspect-[3/4] md:aspect-[4/5] p-2 border border-white/10 reveal delay-200">
-        <div class="w-full h-full bg-cover bg-center image-editorial overflow-hidden" 
-             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDU6kE_dzdOZ-7uNGo9W_b7El_pzqnutGjm8zm3EaHb7mZoNbe1_i3L5kFnALyHfkAKd-mE1891BJ9mDG9yt9j-j10ytrgpkZT-TNdiFBvfj6tQBw2CIMH2h0jjX7MEHA6VD5CZSPQxJBCjKkq-9AncvvmpcFfle2kHwCSQTVB85ZcYDJcwBU32Sakp9ou3aUtoI7g5Vi-bSr-OaunjlDX7paPmvfN3TgIt_yerBdnVjoYE6s-0Rc-xSeipDijWakmn1TmisPy3Vr8');">
-        </div>
-        <!-- Decorative Frame -->
-        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-primary"></div>
+      <div class="hidden md:block pt-0.5">
+        <span class="font-mono text-xs text-accent/60 uppercase tracking-widest">Desde los 15 años</span>
+        <p class="font-mono text-[10px] text-white/30 mt-1 uppercase tracking-widest">Uruguay</p>
+      </div>
+      <div class="pb-4">
+        <div class="md:hidden font-mono text-xs text-accent/60 uppercase tracking-widest mb-2">Desde los 15 años · Uruguay</div>
+        <h4 class="font-serif text-2xl text-white mb-3">Construcción a Gran Escala</h4>
+        <p class="text-white/50 text-sm font-light leading-relaxed">Primeros años en obras de gran envergadura colaborando con <strong class="text-white/80 font-normal">Stiler S.A.</strong> y <strong class="text-white/80 font-normal">Estructuras del Uruguay</strong>. Formación técnica en UTU en fontanería, albañilería y lectura de planos estructurales.</p>
       </div>
     </div>
-
-    <!-- Features subgrid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32 hairline-t pt-16 reveal">
-      <div class="flex flex-col">
-        <div class="text-primary text-3xl mb-4 font-light"><span class="material-symbols-outlined text-[32px]">engineering</span></div>
-        <h4 class="font-serif text-2xl text-white mb-4">Valoración Técnica Real</h4>
-        <p class="text-white/50 text-sm font-light leading-relaxed">Detecto problemas estructurales, vicios ocultos y oportunidades de reforma que impactan directamente en el valor del inmueble.</p>
+    <!-- Item 2 -->
+    <div class="grid grid-cols-[10px_1fr] md:grid-cols-[10px_180px_1fr] gap-6 md:gap-12 pb-16 reveal">
+      <div class="flex flex-col items-center">
+        <div class="timeline-dot"></div>
+        <div class="flex-1 w-[1px] bg-accent/20 mt-3"></div>
       </div>
-      <div class="flex flex-col md:border-l border-white/10 md:pl-8">
-        <div class="text-primary text-3xl mb-4 font-light"><span class="material-symbols-outlined text-[32px]">handshake</span></div>
-        <h4 class="font-serif text-2xl text-white mb-4">Transparencia Total</h4>
-        <p class="text-white/50 text-sm font-light leading-relaxed">Comunicación directa, sin letra pequeña. Te explico cada detalle técnico y finaciero para que decidas con confianza absoluta.</p>
+      <div class="hidden md:block pt-0.5">
+        <span class="font-mono text-xs text-accent/60 uppercase tracking-widest">3 Años</span>
+        <p class="font-mono text-[10px] text-white/30 mt-1 uppercase tracking-widest">Seguridad</p>
       </div>
-      <div class="flex flex-col md:border-l border-white/10 md:pl-8">
-        <div class="text-primary text-3xl mb-4 font-light"><span class="material-symbols-outlined text-[32px]">trending_up</span></div>
-        <h4 class="font-serif text-2xl text-white mb-4">Visión de Inversión</h4>
-        <p class="text-white/50 text-sm font-light leading-relaxed">No solo miro un hogar, evalúo un activo. Uso mi formación en mercados financieros para asegurar que el capital que inviertes está protegido.</p>
+      <div class="pb-4">
+        <div class="md:hidden font-mono text-xs text-accent/60 uppercase tracking-widest mb-2">3 Años · Seguridad Electrónica</div>
+        <h4 class="font-serif text-2xl text-white mb-3">Instalación de Sistemas de Seguridad</h4>
+        <p class="text-white/50 text-sm font-light leading-relaxed">Instalación, configuración y mantenimiento de sistemas de seguridad electrónica: cámaras, sensores, sistemas eléctricos y dispositivos de protección. Dominio técnico en instalaciones complejas.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Servicios Section -->
-  <section id="servicios" class="relative w-full py-24 px-6 md:px-12 bg-surface-dark hairline-t">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 reveal">
-      <div>
-        <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">02. Mi Expertise</div>
-        <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">Servicios<br/><i class="text-primary">Inmobiliarios</i></h2>
+    <!-- Item 3 -->
+    <div class="grid grid-cols-[10px_1fr] md:grid-cols-[10px_180px_1fr] gap-6 md:gap-12 pb-16 reveal">
+      <div class="flex flex-col items-center">
+        <div class="timeline-dot"></div>
+        <div class="flex-1 w-[1px] bg-accent/20 mt-3"></div>
       </div>
-      <p class="text-white/50 max-w-sm text-sm font-light mt-6 md:mt-0">Asesoramiento integral en cada fase de tu operación, respaldado por conocimiento técnico real de la arquitectura interior.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 hairline-t hairline-l">
-      <!-- 1 -->
-      <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/5 transition-colors duration-500 reveal">
-        <span class="font-mono text-xs text-primary/50 mb-8 block">/ 01</span>
-        <h3 class="font-serif text-3xl text-white mb-6">Compra de Inmuebles</h3>
-        <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Te acompaño en la búsqueda y evaluación técnica. Inspecciono personalmente cada propiedad para que inviertas con máxima seguridad.</p>
-        <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Inspección In Situ</li>
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Análisis de Mercado</li>
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Negociación Técnica</li>
-        </ul>
+      <div class="hidden md:block pt-0.5">
+        <span class="font-mono text-xs text-accent/60 uppercase tracking-widest">Últimos 8 años</span>
+        <p class="font-mono text-[10px] text-white/30 mt-1 uppercase tracking-widest">Barcelona</p>
       </div>
-      <!-- 2 -->
-      <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/5 transition-colors duration-500 reveal delay-200">
-        <span class="font-mono text-xs text-primary/50 mb-8 block">/ 02</span>
-        <h3 class="font-serif text-3xl text-white mb-6">Venta Estratégica</h3>
-        <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Maximizo el valor de tu propiedad con una evaluación técnica precisa y un gran plan de marketing adaptado a Vilanova y Garraf.</p>
-        <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Valoración Precisa</li>
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Mejoras Pre-Venta</li>
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Marketing Inmobiliario</li>
-        </ul>
-      </div>
-      <!-- 3 -->
-      <div class="p-10 md:p-14 hairline-b hairline-r group hover:bg-white/5 transition-colors duration-500 reveal delay-400">
-        <span class="font-mono text-xs text-primary/50 mb-8 block">/ 03</span>
-        <h3 class="font-serif text-3xl text-white mb-6">Reforma e Inversión</h3>
-        <p class="text-white/50 text-sm leading-relaxed mb-10 font-light">Identifico oportunidades con potencial. Presupuesto la obra, superviso la ejecución y diseño la estrategia para optimizar tu ROI.</p>
-        <ul class="space-y-4 text-xs font-mono uppercase tracking-widest text-primary-light/70">
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Detección de Activos</li>
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Gestión de Obra</li>
-          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Análisis ROI Completo</li>
-        </ul>
+      <div class="pb-4">
+        <div class="md:hidden font-mono text-xs text-accent/60 uppercase tracking-widest mb-2">Últimos 8 años · Barcelona</div>
+        <h4 class="font-serif text-2xl text-white mb-3">Gestor de Reformas Integrales</h4>
+        <p class="text-white/50 text-sm font-light leading-relaxed">Liderazgo técnico de proyectos de reformas integrales en pisos de gama baja y alta en Barcelona y la costa del Garraf. Planificación completa de recursos, plazos y calidad de ejecución.</p>
       </div>
     </div>
-  </section>
+    <!-- Item 4 — ACTIVE -->
+    <div class="grid grid-cols-[10px_1fr] md:grid-cols-[10px_180px_1fr] gap-6 md:gap-12 reveal">
+      <div class="flex flex-col items-center">
+        <div class="timeline-dot active"></div>
+      </div>
+      <div class="hidden md:block pt-0.5">
+        <span class="font-mono text-xs text-accent uppercase tracking-widest">Ahora</span>
+        <p class="font-mono text-[10px] text-white/30 mt-1 uppercase tracking-widest">Vilanova &amp; Garraf</p>
+      </div>
+      <div class="pb-4 border border-accent/30 p-6 -ml-6 pl-12 md:ml-0 md:pl-6 md:border-l-2 md:border-y-0 md:border-r-0 md:border-accent/50 md:rounded-none rounded-lg">
+        <div class="md:hidden font-mono text-xs text-accent uppercase tracking-widest mb-2">Ahora · Vilanova &amp; Garraf</div>
+        <h4 class="font-serif text-2xl text-white mb-3">Asesor Inmobiliario</h4>
+        <p class="text-white/60 text-sm font-light leading-relaxed">Toda la experiencia técnica acumulada al servicio del mercado inmobiliario. Compra, venta e inversión con criterio profesional y conocimiento real desde los cimientos.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Diferencial / CTA -->
-  <section class="relative py-32 px-6 md:px-12 bg-primary">
-    <!-- Texture overlay -->
-    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
-    <div class="relative z-10 max-w-4xl mx-auto text-center reveal">
-      <h2 class="font-serif text-5xl md:text-7xl text-black leading-tight mb-8">El conocimiento edifica<br/><i class="font-light">el éxito.</i></h2>
-      <p class="text-black/70 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto">No busco cerrar operaciones rápidamente, busco cerrarlas a la perfección. Mi reputación se construye sobre los cimientos de cada cliente satisfecho.</p>
-      
-      <a href="https://wa.me/34655486343" target="_blank" class="inline-flex items-center justify-center px-12 py-6 bg-black text-primary text-sm uppercase tracking-[0.2em] font-mono hover:bg-white hover:text-black transition-colors duration-500 shadow-2xl">
-        Conversar por WhatsApp
+<!-- ═══════════════════════════════════════════
+     CTA ACCENT BAND
+════════════════════════════════════════════ -->
+<section class="relative py-28 px-6 md:px-12 bg-accent overflow-hidden">
+  <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); background-repeat: repeat;"></div>
+  <div class="relative z-10 max-w-4xl mx-auto text-center reveal">
+    <h2 class="font-serif text-4xl md:text-6xl text-background-dark leading-tight mb-8">
+      El conocimiento edifica<br/><em class="font-light">el éxito.</em>
+    </h2>
+    <p class="text-background-dark/70 text-lg font-light mb-12 max-w-2xl mx-auto">No busco cerrar operaciones rápidamente, busco cerrarlas a la perfección. Mi reputación se construye sobre los cimientos de cada cliente satisfecho.</p>
+    <a href="https://wa.me/34655486343?text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20una%20consulta%20inmobiliaria" target="_blank" rel="noopener"
+       class="btn-gold inline-flex items-center gap-4 px-12 py-6 bg-background-dark text-accent text-sm uppercase tracking-[0.2em] font-mono border border-background-dark shadow-2xl">
+      Conversar por WhatsApp
+      <span class="material-symbols-outlined font-light text-[18px]">arrow_forward</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACTO / FOOTER
+════════════════════════════════════════════ -->
+<footer id="contacto" class="bg-background-dark pt-28 pb-12 px-6 md:px-12 hairline-t">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 max-w-6xl mx-auto reveal">
+    <div>
+      <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">04 / Contacto</div>
+      <h2 class="font-serif text-4xl md:text-5xl text-white mb-10">¿Hablamos sobre<br/><em class="text-accent">tu futuro inmueble?</em></h2>
+      <a href="mailto:deco.dormirefointegales@gmail.com" class="text-lg text-white/70 hover:text-accent transition-colors font-light block mb-3">
+        deco.dormirefointegales@gmail.com
+      </a>
+      <a href="tel:+34655486343" class="text-lg text-white/70 hover:text-accent transition-colors font-light block">
+        +34 655 486 343
       </a>
     </div>
-  </section>
-
-  <!-- Contacto & Footer -->
-  <footer id="contacto" class="bg-background-dark pt-32 pb-12 px-6 md:px-12 hairline-t">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-24 max-w-6xl mx-auto reveal">
-      <div>
-        <div class="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">Contáctame</div>
-        <h2 class="font-serif text-4xl md:text-5xl text-white mb-10">¿Hablamos sobre<br/><i class="text-primary">tu futuro inmueble?</i></h2>
-        <a href="mailto:deco.dormirefointegales@gmail.com" class="text-xl md:text-2xl text-white/80 hover:text-primary transition-colors font-light block mb-4">deco.dormirefointegales@gmail.com</a>
-        <a href="tel:+34655486343" class="text-xl md:text-2xl text-white/80 hover:text-primary transition-colors font-light block">+34 655 486 343</a>
+    <div class="flex flex-col justify-end">
+      <div class="grid grid-cols-2 gap-4">
+        <a href="https://wa.me/34655486343?text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20una%20consulta%20inmobiliaria" target="_blank" rel="noopener"
+           class="flex items-center justify-center gap-3 bg-[#25D366] text-white font-mono text-xs uppercase tracking-widest px-6 py-5 hover:bg-[#20bd5a] transition-colors">
+          <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="tel:+34655486343"
+           class="flex items-center justify-center gap-3 border border-accent text-accent font-mono text-xs uppercase tracking-widest px-6 py-5 hover:bg-accent hover:text-background-dark transition-colors">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+          Llamar
+        </a>
       </div>
-      <div class="flex flex-col justify-end items-start md:items-end">
-        <p class="text-white/40 font-mono text-xs uppercase tracking-widest text-left md:text-right mb-4">Disponible Lunes - Viernes<br/>9:00 - 20:00</p>
-        <p class="text-white/40 font-mono text-xs uppercase tracking-widest text-left md:text-right">Vilanova i la Geltrú<br/>Barcelona, Spain</p>
-      </div>
+      <p class="text-white/30 font-mono text-xs uppercase tracking-widest mt-6">
+        Vilanova i la Geltrú · Disponible L–V 9:00–20:00
+      </p>
     </div>
+  </div>
 
-    <!-- Bottom Footer -->
-    <div class="flex flex-col md:flex-row items-center justify-between pt-8 hairline-t reveal">
-      <div class="flex items-center gap-2 mb-6 md:mb-0">
-        <span class="material-symbols-outlined text-primary text-xl">architecture</span>
-        <span class="font-serif text-lg text-white">S. Romero</span>
-      </div>
-      <div class="flex gap-8 mb-6 md:mb-0">
-        <a href="#" class="text-white/30 hover:text-primary transition-colors text-sm uppercase font-mono">Instagram</a>
-        <a href="#" class="text-white/30 hover:text-primary transition-colors text-sm uppercase font-mono">LinkedIn</a>
-        <a href="/linktree/" class="text-primary hover:text-white transition-colors text-sm uppercase font-mono underline underline-offset-4 decoration-primary/50">Ver Linktree</a>
-      </div>
-      <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/20">
-        Sebastián Romero © 2026. All rights reserved.
-      </div>
+  <!-- Bottom bar -->
+  <div class="flex flex-col md:flex-row items-center justify-between pt-8 hairline-t gap-6 reveal">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-accent text-xl">architecture</span>
+      <span class="font-serif text-lg text-white">S. Romero</span>
     </div>
-  </footer>
+    <div class="flex gap-8">
+      <a href="#" class="text-white/30 hover:text-accent transition-colors text-xs font-mono uppercase tracking-widest">Instagram</a>
+      <a href="#" class="text-white/30 hover:text-accent transition-colors text-xs font-mono uppercase tracking-widest">LinkedIn</a>
+      <a href="/linktree/" class="text-accent hover:text-white transition-colors text-xs font-mono uppercase tracking-widest underline underline-offset-4 decoration-accent/40">Links</a>
+    </div>
+    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/20">Sebastián Romero &copy; 2026</p>
+  </div>
+</footer>
 
 </main>
 
-<!-- Scroll Animations Observer Script -->
+<!-- ═══════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════ -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          // Optional: Stop observing once revealed
-          // observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    });
+  // ── Scroll reveal ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.reveal').forEach((el) => {
-      observer.observe(el);
-    });
-  });
+  // ── Mobile nav toggle ──
+  function toggleNav() {
+    const nav = document.getElementById('mobile-nav');
+    nav.classList.toggle('open');
+    document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+  }
 </script>
 </body>
 </html>
