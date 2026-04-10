@@ -7,3 +7,11 @@
 
 # Documentos privados
 *.pdf
+
+# Guias
+*.md
+guias
+
+.gitignore
+.gitignore-backup
+.gitignore-backup-2
